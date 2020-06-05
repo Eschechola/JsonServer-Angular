@@ -1,0 +1,28 @@
+<!-- BINDING DE ATRIBUTO
+<p [id]="atributte">product-create works!</p> -->
+
+<!-- BINDING DE EVENTO -->
+<!-- <button (click)="doSomething()">aaaaa</button> -->
+
+
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price" />
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="CreateProduct()" color="primary"> 
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="Cancel()">
+        Cancelar!
+    </button>
+</mat-card>
